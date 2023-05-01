@@ -1,15 +1,13 @@
-function ExpenseItems() {
+import './ExpenseItems.css'
+
+
+function ExpenseItems(props) {
     return (
       <div>
-        
-         <div/>
-         
-         <div>Food Rs10</div>
-         <div>Petrol Rs20</div>
-         <div>Movies Rs 200</div>
-         <div/>
-         </div>
+        <p>Amount: {props.amount}</p>
+        <p>Location of Expenditure: {props.location}</p>
+      </div>
     );
-  };
+  }
   
   export default ExpenseItems;
