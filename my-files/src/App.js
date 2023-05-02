@@ -1,32 +1,34 @@
-import ExpenseItems from "./ExpenseItems";
+import ExpenseDetails from "./components/expenseItem";
+import "./ExpenseItems.css";
 
 
-const expenses = [
-  { id: 1, amount: 100, LocationOfExpenditure: "Delhi" },
-  { id: 2, amount: 200, LocationOfExpenditure: "Mumbai" },
-  // ... and so on for 100 expenses
-];
 
-function App() {
-  const locations = [
-    'Delhi',
-    'Mumbai',
-    'Dehradun',
-    // ...and so on, for 97 more items
-  ];
+function ExpenseItem(props) {
 
-  const expenseItems = [];
-  for (let i = 0; i < 100; i++) {
-    const locationIndex = i % locations.length;
-    const location = locations[locationIndex];
-    expenseItems.push(<ExpenseItems LocationOfExpenditure={location} key={i} />);
-  }
+
 
   return (
-    <div>
-      {expenseItems}
+
+    <div className='expense-item'>
+
+     
+
+      <ExpenseDetails 
+
+        title={props.title} 
+
+        amount={props.amount} 
+
+        category={props.category} 
+
+      />
+
     </div>
+
   );
+
 }
 
-export default App;
+
+
+export default ExpenseItem;
